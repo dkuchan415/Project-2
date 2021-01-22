@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Fantasy Baseball Tool</title>
+    <!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- <script type="text/javascript" {{ url_for('static', filename='CRapp.py')}}></script> -->
+    <script type="text/javascript" {{ url_for('static', filename='hitters.js' )}}></script>
+    <script src="../static/granim.min.js"></script>
+    <script src="../static/granim.js"></script>
+    <link rel="shortcut icon" href="#">
+    </link>
+
+</head>
+
+<body>
+    <div class="container">
+            <div class="wrapper" style="padding-left: 20px">
+                <canvas id="first" class="col-sm-12"></canvas>
+            </div>
+    </div>
+    <div class="row">
+        <!-- Select Player Dropdown -->
+        <div class="col-md-6">
+            <div class="well" style="padding-left: 30px">
+                <h5>Select Player</h5>
+                <select id="selDataset"></select> <!-- onchange="optionChanged(this.value)"" -->
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="well" style="padding-left: 30px">
+                <h5>Select Player</h5>
+                <select id="selDataset2"></select> <!-- onchange="optionChanged(this.value)"" -->
+            </div>
+        </div>
+        <!-- Select Year Dropdown
+        <div class="col-md-2">
+            <div class="well">
+                <h5>Select Year</h5>
+                <select id="selDataset2"></select>
+            </div>
+        </div> -->
+    </div>
+    <!-- Table for player stats -->
+    <div class="row">
+        <div class="col-md-6" id="sample-metadata" class="colpanel-body" style="padding-left: 45px !important">
+            <h5 id="avgTable"></h5>
+            <h5 id="opsTable"></h5>
+            <h5 id="rTable"></h5></b>
+            <h5 id="rbiTable"></h5>
+            <h5 id="hrTable"></h5>
+            <h5 id="sbTable"></h5>
+        </div>
+        <div class="col-md-6" id="sample-metadata2" class="colpanel-body" style="padding-left: 45px !important">
+            <h5 id="avgTable2"></h5></b>
+            <h5 id="opsTable2"></h5></b>
+            <h5 id="rTable2"></h5></b>
+            <h5 id="rbiTable2"></h5></b>
+            <h5 id="hrTable2"></h5></b>
+            <h5 id="sbTable2"></h5></b>
+        </div>
+    </div>
+
+
+    <!-- Bar Graphs -->
+    <div class="row">
+        <div class="col-md-3">
+            <div id="Obar"></div>
+        </div>
+        <div class="col-md-3">
+            <div id="Obar2"></div>
+        </div>
+        <div class="col-md-3">
+            <div id="Obar3"></div>
+        </div>
+        <div class="col-md-3">
+            <div id="Obar4"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div id="Zbar"></div>
+        </div>
+        <div class="col-md-3">
+            <div id="Zbar2"></div>
+        </div>
+        <div class="col-md-3">
+            <div id="Zbar3"></div>
+        </div>
+        <div class="col-md-3">
+            <div id="Zbar4"></div>
+        </div>
+    </div>
+
+
+    <!-- Speedometer Graph -->
+    <div class="col-md-5">
+        <div id="gauge"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./static/pitchers.js"></script>
+</body>
+
+</html>
